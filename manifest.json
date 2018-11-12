@@ -2,9 +2,11 @@
     "name": "Unit Converter",
     "version": "1.0",
     "description": "Highlight a unit and see conversions",
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
     "manifest_version": 2
   }
