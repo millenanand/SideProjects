@@ -1,6 +1,10 @@
   {
     "name": "Unit Converter",
     "version": "1.0",
-    "description": "Highlight a metric and see conversions",
+    "description": "Highlight a unit and see conversions",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
     "manifest_version": 2
   }
