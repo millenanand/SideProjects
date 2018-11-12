@@ -4,8 +4,30 @@
 
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log("The color is green.");
-  });
+chrome.runtime.getBackgroundPage(function(backgroundPage) {
+	console.log(window);
+	console.log(document.selection);
 });
+ /*chrome.runtime.onStartup.addListener(function() {
+      console.log("The color is green.");
+  });
+*/
+
+function highlightHandler(e) {
+    // get the highlighted text
+    var text = document.getSelection();
+    // check if anything is actually highlighted
+    if(text !== '') {
+        // we've got a highlight, now do your stuff here
+        //doStuff(text);
+        console.log(text);
+    }
+}
+
+
+//document.onmouseup = highlightHandler;
+
+
+function doStuff(text) {
+    // do something cool
+}
