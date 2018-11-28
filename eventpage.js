@@ -9,7 +9,7 @@ chrome.contextMenus.create(contextMenuItem)
 console.log('waefawfwf')
 
 chrome.contextMenus.onClicked.addListener(function(clickedData) {
-	console.log('hiafwafaewfewfawfawfwaefaewf')
+	console.log('whatever')
 })
 
 // chrome.contextMenus.onClicked.addListener(function(clickData) {
