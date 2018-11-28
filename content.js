@@ -1,5 +1,3 @@
-console.log('hi');
-
 function highlightHandler(e) {
     // get the highlighted text
     var text = document.getSelection();
