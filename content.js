@@ -15,10 +15,14 @@ document.onmouseup = highlightHandler;
 function doStuff(text) {
     //git push -u origin millen
     // do something cool
-    console.log(text)
+    //console.log(text)
 
     //split array
+    var splitArray = text.split(" ");
+    console.log(splitArray);
 
-    //
+    var Qty = require('js-quantities');
+    qty = new Qty(124, 'cm');
+    console.log(qty);
 
 }
