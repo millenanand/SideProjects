@@ -2,20 +2,15 @@ var contextMenuItem = {
 	"id": "unit",
 	"title": "Converter",
 	"contexts": ["selection"],
-}
+};
 
-chrome.contextMenus.create(contextMenuItem)
+chrome.contextMenus.create(contextMenuItem);
 
-console.log('waefawfwf')
 
-chrome.contextMenus.onClicked.addListener(function(clickedData) {
-	console.log('hiafwafaewfewfawfawfwaefaewf')
+chrome.contextMenus.onClicked.addListener(function(clickData) {
+	if (clickData.menuItemId == "unit" && clickData.selectionText) {
+
+		console.log('we in')
+
+	}
 })
-
-// chrome.contextMenus.onClicked.addListener(function(clickData) {
-// 	console.log('hi')
-// 	console.log(clickData)
-// 	if (clickData.menuItemId == "unit" && clickData.selectionText) {
-
-// 	}
-// })
