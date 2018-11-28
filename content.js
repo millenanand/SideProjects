@@ -13,6 +13,12 @@ document.onmouseup = highlightHandler;
 
 
 function doStuff(text) {
+    //git push -u origin millen
     // do something cool
     console.log(text)
+
+    //split array
+
+    //
+
 }
