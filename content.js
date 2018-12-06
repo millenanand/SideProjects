@@ -16,13 +16,18 @@ function doStuff(text) {
     //git push -u origin millen
     // do something cool
     //console.log(text)
+    chrome.storage.sync.set({'value': text}, function() {
+    	console.log('value sent')
+    });
 
     //split array
-    var splitArray = text.split(" ");
-    console.log(splitArray);
+    // var splitArray = text.split(" ");
+    // console.log(splitArray);
 
-    var Qty = require('js-quantities');
-    qty = new Qty(124, 'cm');
-    console.log(qty);
+    // var Qty = require('js-quantities');
+    // qty = new Qty(124, 'cm');
+    // console.log(qty);
+
+
 
 }
