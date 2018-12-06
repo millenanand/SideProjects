@@ -1,3 +1,5 @@
+import {Qty} from './node_modules/js-quantities/src/quantities.js' 
+
 function highlightHandler(e) {
     // get the highlighted text
     var text = document.getSelection();
@@ -20,14 +22,13 @@ function doStuff(text) {
     	console.log('value sent')
     });
 
-    //split array
-    // var splitArray = text.split(" ");
-    // console.log(splitArray);
+     //split array
+     var splitArray = text.split(" ");
+     console.log(splitArray);
 
-    // var Qty = require('js-quantities');
-    // qty = new Qty(124, 'cm');
-    // console.log(qty);
-
-
-
+  
+    var Qty = require('js-quantities'); //error here: require is not defined
+    qty = new Qty(124, 'cm');
+    console.log(qty);
+    console.log("yuh");
 }
