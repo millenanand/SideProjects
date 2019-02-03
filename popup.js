@@ -12,20 +12,38 @@ chrome.storage.sync.get('value', function(unitValue) {
 	var unitTag; 
 	var unitText;
 	var unitType = qty.kind();
-	if (unitType = "length") {
+	var lengthList = ["meter", "foot", "mile", "inch", "yard", "millimeter", "centimeter", "kilometer"];
+	if (unitType == "length") {
 		var numerator = qty.numerator[0];
-		var lengthList = ["meter", "foot", "mile", "inch", "yard", "millimeter", "centimeter", "kilometer"];
 		for (var i=0; i < lengthList.length; i++) {
 			if (numerator != lengthList[i]) {
 				unitTag = document.createElement('p');
-
 				unitText = document.createTextNode(qty.to(lengthList[i]));
 				unitTag.appendChild(unitText);
 				unitTag.style.cssText = "font-size:22px";
 				document.body.appendChild(unitTag);
-
-				//make a conversion here
-
+			}
+		}
+	}
+	else if (unitType == "volume") {
+		var numerator = qty.numerator[0];
+		var volumeList = ["cup", "fluid-ounce", "gallon", "liter", "pint", "quart", "tablespoon", "teaspoon", "meter^3", "foot^3", "mile^3", "inch^3", "yard^3", "millimeter^3", "centimeter^3", "kilometer^3"]; 
+		for (var i=0; i < volumeList.length; i++) {
+			if (numerator != volumeList[i]) {
+				unitTag = document.createElement('p');
+				unitText = document.createTextNode(qty.to(volumeList[i]));
+				unitTag.appendChild(unitText);
+				unitTag.style.cssText = "font-size:22px";
+				document.body.appendChild(unitTag);
+			}
+		}
+		for (var i=0; i < lengthList.length; i++) {
+			if (numerator != lengthList[i]) {
+				unitTag = document.createElement('p');
+				unitText = document.createTextNode(qty.to(lengthList[i] + "^3"));
+				unitTag.appendChild(unitText);
+				unitTag.style.cssText = "font-size:22px";
+				document.body.appendChild(unitTag);
 			}
 		}
 	}
