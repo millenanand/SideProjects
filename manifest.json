@@ -1,5 +1,5 @@
   {
-    "name": "TRF Credit Score",
+    "name": "Unit Converter",
     "version": "1.0",
     "description": "Highlight a unit and see conversions",
     "content_scripts": [
